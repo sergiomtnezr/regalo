@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Regalo ❤️</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+.pantalla{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.oculto{
+    display:none;
+}
+
+h1{
+    color:#e91e63;
+}
+
+p{
+    font-size:22px;
+    max-width:800px;
+}
+
+button{
+    background:#e91e63;
+    color:white;
+    border:none;
+    border-radius:30px;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+img{
+    max-width:90%;
+    max-height:70vh;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+#p2{
+    background:#000;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Pantalla 1 -->
+
+<div id="p1" class="pantalla">
+
+<h1>❤️ FELICES 29 CARIÑO ❤️</h1>
+
+<p>Te he preparado una pequeña sorpresa...</p>
+
+<p>Abre la caja en la que está pegado este QR 🎁</p>
+
+<button onclick="mostrar('p2')">
+Ya la he abierto ❤️
+</button>
+
+</div>
+
+<!-- Pantalla 2 -->
+
+<div id="p2" class="pantalla oculto">
+
+<h1 style="color:white;">🏰 NOS VAMOS DE VIAJE 🏰</h1>
+
+Disney.jpeg
+
+<button onclick="mostrar('p3')">
+Continuar
+</button>
+
+</div>
+
+<!-- Pantalla 3 -->
+
+<div id="p3" class="pantalla oculto">
+
+<h1>📅 TOCA ELEGIR FECHA</h1>
+
+<p>
+Las entradas pueden escogerse en la fecha que queramos.
+</p>
+
+<button onclick="mostrar('p4')">
+Continuar
+</button>
+
+</div>
+
+<!-- Pantalla 4 -->
+
+<div id="p4" class="pantalla oculto">
+
+<h1>Nuestro primer viaje ❤️</h1>
+
+<img src="zgz.jpeg">
+
+<button onclick="mostrar('p5')">
+Continuar
+</button>
+
+</div>
+
+<!-- Pantalla 5 -->
+
+<div id="p5" class="pantalla oculto">
+
+<h1>Nuestro segundo viaje ❤️</h1>
+
+<img src="Roma.jpeg">
+
+<button onclick="mostrar('p6')">
+Continuar
+</button>
+
+</div>
+
+<!-- Pantalla 6 -->
+
+<div id="p6" class="pantalla oculto">
+
+<h1>Nuestro tercer viaje ❤️</h1>
+
+<img src="londres.jpeg">
+
+<button onclick="mostrar('p7')">
+Continuar
+</button>
+
+</div>
+
+<!-- Pantalla 7 -->
+
+<div id="p7" class="pantalla oculto">
+
+<h1>❤️</h1>
+
+<h2>Por seguir coleccionando momentos juntos.</h2>
+
+<h2>Te amo ❤️</h2>
+
+</div>
+
+<script>
+
+function mostrar(id){
+
+    document.querySelectorAll('.pantalla').forEach(function(p){
+
+        p.classList.add('oculto');
+
+    });
+
+    document.getElementById(id).classList.remove('oculto');
+
+}
+
+</script>
+
+</body>
+</html>
